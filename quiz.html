@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="quiz, quiz-project, milestone-2"/>
+    <meta name="author" content="susana-pato">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--icons-->
+    <script src="https://kit.fontawesome.com/da9b9f74c7.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="JS Milestone two/css/styles.css">
+    <link rel="stylesheet" href="JS Milestone two/css/quiz.css">
+    
+    <title>Quiz</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="JS Milestone two/assets/images/logo.png" alt="logo" class="rounded-pill"></a>
+    
+        <!-- menu toggle -->
+        <div class="navbar-button"> 
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+            </button>
+        </div>
+        
+
+        <!-- menu links -->
+        <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <!-- modal trigger in navbar menu -->
+                    <button type="button" class="btn modal-button" data-bs-toggle="modal" data-bs-target="#quizModal">
+                        About
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>  
+
+    <!--  MODAL CODE-->
+    <div id="quizModal" class="modal fade">
+        <div id="modal" class="flex-column">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title"><b>Why is it important to know more about allergens?</b></h3>
+                        <button type="button" class="btn btn-close" aria-label="#" data-bs-dismiss="modal">
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <p class="modal-text"> 
+                        Many thousands of people in the UK, both children and adults, have allergies, 
+                        and it’s important that they’re able to go about their day-to-day lives in safety, 
+                        which means that those working with food need to be equipped with the right knowledge. 
+                        </p>
+                        <p class="modal-text">
+                        Quality training in the food sector is hugely important, as there are numerous matters
+                        of health and safety to be aware of, and one of the most important considerations is that 
+                        of food allergies. 
+                        </p>
+                        <p class="modal-text">
+                        <b>What is a food allergy?</b><br>
+                        Food allergy occurs when a person’s immune system reacts inappropriately to a food. 
+                        The first stage of the process is called sensitisation – when the immune system’s “memory” 
+                        registers the food as a threat. Antibodies to that food are produced, and at a subsequent 
+                        encounter, these antibodies connect with the food’s proteins and trigger the release of 
+                        certain substances in the body, such as histamine. This results in an allergic reaction. 
+                        </p>
+                        <p class="modal-text">
+                        <b>What is Anaphylaxis?</b><br>
+                        Anaphylaxis is a severe and often sudden allergic reaction. It can occur when someone 
+                        with allergies is exposed to something they are allergic to (known as an allergen). 
+                        Reactions usually begin within minutes and rapidly progress but can occur up to 2-3 hours later.
+                        Anaphylaxis is potentially life-threatening and always requires an immediate emergency response. 
+                        </p>
+                        <p class="modal-text">
+                        An allergic response may range from mild or moderate symptoms to a more severe reaction. 
+                        </p>
+                        <p class="modal-text">
+                        <b>Mild symptoms include:</b><br>
+                        Nettle rash (otherwise known as hives or urticaria) or tingling or itchy feeling in the mouth. 
+                        </p>
+                        <p class="modal-text">
+                        <b>More serious symptoms</b> for some people, including children: <br>
+                        Abdominal pain, nausea and vomiting,
+                        Widespread flushing of the skin, 
+                        Nettle rash (otherwise known as hives or urticaria), 
+                        Swelling of the skin (known as angioedema) anywhere on the body,  
+                        Swelling in the face, lips, tongue, throat and/or mouth, 
+                        Difficulty swallowing,
+                        Faintness, drowsiness, dizziness,
+                        Difficult or noisy breathing, wheeze, persistent cough, 
+                        Severe asthma, 
+                        In some cases there is a dramatic fall in blood pressure (<b>anaphylactic shock</b>). 
+                        This is where the person may become weak and floppy and may have a sense of something terrible happening. 
+                        This may lead to collapse and unconsciousness. 
+                        </p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a href="quiz.html" class="modal-a">Quiz</a>
+                        <button type="button" class="btn btn-footer" aria-label="#" data-bs-dismiss="modal">Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- QUIZ CONTAINER -->
+    <div class="quiz-container">
+        <div id="quiz" class="justify-center flex-column">
+            <section aria-labelledby="hud">
+                <!-- HUD is also called a 'head up display'-->
+                <div id="hud" class="justify-content-between">
+                    <div class="col-sm-6 hud-item">
+                        <div id="hud-item" class="text-left">
+                            <p id="progressText" class="hud-prefix"></p>
+                        </div>
+                        <div id="progressBar">
+                            <div id="progressBarFull"></div>
+                        </div>
+                    
+                    </div>
+                    <div class="col-sm-6 hud-item score">
+                        <h3 class="hud-prefix">Score</h3>
+                        <h3 class="hud-main-text" id="score">0</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section aria-labelledby="choices">
+                <div class="choices" id="choices">
+                    <h4 class="question" id="question">What is the answer to this question?</h4>
+                
+                    <div class="choice-container">
+                        <h4 class="choice-prefix">A</h4>
+                        <p class="choice-text text-left" data-number="0">choice 1</p>
+                    </div>
+                    <div class="choice-container">
+                        <h4 class="choice-prefix">B</h4>
+                        <p class="choice-text text-left" data-number="1">choice 2</p>
+                    </div>
+                    <div class="choice-container">
+                        <h4 class="choice-prefix">C</h4>
+                        <p class="choice-text text-left" data-number="2">choice 3</p>
+                    </div>
+                    <div class="choice-container">
+                        <h4 class="choice-prefix">D</h4>
+                        <p class="choice-text text-left" data-number="3">choice 4</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <br>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">     
+                <div class="col text-center">   <!-- get icon to open in new page -->
+                    <a href="https://github.com/Susafp" target="_blank" rel="noopener" aria-label="github"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/susana-fp/" target="_blank" rel="noopener" aria-label="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS Milestone two/js/quiz.js"></script>
+    
+    <!-- JS BOOTSRAP BUNDLE WITH POPPER -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

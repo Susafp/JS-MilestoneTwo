@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    font-size: 20px;
+}
+
+/* NAVBAR */
+
+.rounded-pill{
+    width:50px;
+    height: 50px;
+}
+
+.rounded-pill:hover{
+    box-shadow: 0 0.4rem 1.4rem 0 black;
+    cursor: pointer;
+}
+
+
+.nav-link{
+    color: black;
+    font-size: 20px;
+    margin-right: 40px;
+}
+
+.active{
+    color: rgb(250, 229, 201);
+    text-decoration: none;
+}
+
+.active:hover{
+    color: rgb(250, 229, 201);
+}
+
+.nav-link:hover{
+    color: rgb(250, 229, 201);
+    transition: transform 300ms;
+} 
+
+.navbar-toggler{
+    border: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+/* toggler 3 bars: */
+.toggler-icon{
+    width: 30px;
+    height: 4px;
+    background-color: rgb(250, 229, 201);
+    border: 1px solid black;
+    display: block;
+    transition: all 0.2s;
+}
+
+.middle-bar{
+    margin: 5px auto;
+}
+
+.middle-bar:hover{
+    margin: 8px auto;
+}
+
+
+/* MODAL */
+
+/* button in navbar */
+.modal-button{
+    font-size: 20px;
+    margin: 0;
+}
+
+.modal-button:hover{
+    color: rgb(250, 229, 201);
+    transition: transform 300ms;
+}
+
+.btn-check:focus+.btn, .btn:focus { 
+    outline: 0;
+    box-shadow: none;
+} /* removed predefined style - blue box shadow effect*/
+
+/* modal header */
+
+.modal-title{
+    width: 80%;
+}
+
+.btn-close{
+    background-color: rgb(250, 229, 201);
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.btn-close:hover{
+    font-weight: bolder;
+
+}
+
+/* modal body */
+
+.modal-body,
+.modal-text{
+    color: black;
+    text-align: justify;
+}
+
+/* modal footer */
+
+
+@supports(justify-content: space-evenly){
+    .modal-footer{
+        justify-content: space-evenly;
+    }
+} /* to be supported by IE */
+
+.modal-a{
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-weight: lighter;
+}
+
+.modal-a,
+.btn-footer{
+    background-color: rgb(250, 229, 201);
+    color: black;
+    text-decoration: none;
+}
+
+.modal-a:hover,
+.btn-footer:hover{
+    font-weight: bold;
+    color: black;
+}
+
+/* BODY */
+
+.container{
+    background: linear-gradient(rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.30)), url(../assets/images/hero-img.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 600px;
+}
+
+.container
+h1, h2{
+    color: floralwhite;
+}
+
+
+img{
+    width: 130px;
+    height: 130px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
+.button{
+    color: black;
+    background-color: white;
+    border-radius: 6px;
+    padding: 6px 20px;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+.button:hover{
+    color: black;
+    box-shadow: 0 0.4rem 1.4rem 0 black;
+    text-decoration: none;
+    transition: transform 200ms;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer{
+    padding: 10px;
+    /*margin-right: 40px;*/
+    
+}
+
+.fa-brands{
+    color: black;
+    font-size: 24px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+}
+
+.fa-brands:hover{
+    font-size: 22px;
+}

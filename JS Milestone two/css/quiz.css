@@ -1,0 +1,116 @@
+
+/* QUIZ CONTAINER */
+
+.quiz-container{
+    background: url(../assets/images/nuts.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 5% 10%;
+    justify-content: space-around;
+}
+
+/* HUD */
+
+#hud{
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+}
+
+p, 
+#progressText, 
+.hud-prefix{
+    text-align: left;
+}
+
+#progressBar{
+    width: 100%;
+    height: 20px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+
+}
+
+#progressBarFull{
+    height: 19px;
+    background-color: rgba(0, 0, 0, 0.50);
+    width: 0%;
+}
+
+/* SCORE */
+
+.hud-prefix,
+.hud-main-text{     
+    color: black;
+    font-weight: bold;
+    text-align: right;
+}
+
+.hud-main-text{
+    margin-right: 20px;
+    font-size: 36px;
+}
+
+/* CHOICE CONTAINER */
+
+.choices{
+    background: rgba(250, 229, 201, 0.505);
+    padding: 14px 14px 16px 14px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.question{
+    font-weight: bold;
+    text-align: left;
+}
+
+.choice-container{
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 1% 0 2%;
+}
+
+.choice-container:hover{
+    transition: transform 250ms;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 575px){
+    .choice-container:hover{
+        box-shadow: 0 0.4rem 1.4rem 0 black;
+    }
+}
+
+.choice-prefix{
+    background-color:  rgba(0, 0, 0, 0.565);
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: white;
+    margin: 3px 5px ;
+}
+
+.choice-text{
+    color: black;
+    padding-top: 14px;
+    padding-left: 1%;
+    width: 100%;
+    text-align: left;
+}
+
+.correct{
+    background-color: #1f7d35;
+}
+
+.incorrect{
+    background-color: #b32a38;
+}
+
+
+   
