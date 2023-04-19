@@ -164,8 +164,7 @@ https://github.com/Susafp/Allergens-Quiz-Milestone-two.git
 
 ### Live link
 
-https://susafp.github.io/Allergens-Quiz-Milestone-two/
-
+https://susafp.github.io/JS-MilestoneTwo/
 
 ### Running Code Locally
 
